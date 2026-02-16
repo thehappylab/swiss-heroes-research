@@ -18,7 +18,8 @@
       "maxConcurrent": 4,
       "subagents": {
         "maxConcurrent": 8
-      }
+      },
+      "skils": ["/data/openclaw-data/skills"]
     },
     "list": [
       {
@@ -96,12 +97,5 @@
         "accountId": "operation-bot"
       }
     }
-  ],
-  "skills": {
-    "local": {
-      "extraDirs": [
-        "/data/openclaw-data/skills"
-      ]
-    }
-  }
+  ]
 }

@@ -1,6 +1,6 @@
 ---
 name: new_project
-description: Scaffold a new project from the thehappylab/app-template, deploy it on Coolify, and set up Umami analytics tracking. Use when the user wants to create a new project, start a new app, or bootstrap a new website.
+description: Scaffold a new project / application from the thehappylab/app-template, deploy it on Coolify, and set up Umami analytics tracking. Use when the user wants to create a new project, start a new app, or bootstrap a new website.
 ---
 
 # New Project – Full Setup
