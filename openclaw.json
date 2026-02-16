@@ -1,0 +1,96 @@
+{
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "openrouter/moonshotai/kimi-k2.5"
+      },
+      "models": {
+        "openrouter/auto": {
+          "alias": "OpenRouter"
+        },
+        "openrouter/anthropic/claude-opus-4.6": {},
+        "openrouter/moonshotai/kimi-k2.5": {},
+        "openrouter/openai/gpt-5.2-codex": {}
+      },
+      "compaction": {
+        "mode": "safeguard"
+      },
+      "maxConcurrent": 4,
+      "subagents": {
+        "maxConcurrent": 8
+      }
+    },
+    "list": [
+      {
+        "id": "growth",
+        "name": "GrowthAgent",
+        "default": true,
+        "workspace": "/data/workspace-growth",
+        "model": "openrouter/moonshotai/kimi-k2.5"
+      },
+      {
+        "id": "builder",
+        "name": "BuilderAgent",
+        "workspace": "/data/workspace-builder",
+        "model": "openrouter/anthropic/claude-opus-4.6"
+      },
+      {
+        "id": "operation",
+        "name": "OperationAgent",
+        "workspace": "/data/workspace-operation",
+        "model": "openrouter/moonshotai/kimi-k2.5"
+      }
+    ]
+  },
+  "tools": {
+    "agentToAgent": {
+      "enabled": true,
+      "allow": ["growth", "builder", "operation"]
+    },
+    "web": {
+      "search": {
+        "enabled": true,
+        "provider": "brave",
+        "apiKey": "${BRAVE_WEBSEARCH_API_KEY}"
+      }
+    }
+  },
+  "channels": {
+    "discord": {
+      "accounts": {
+        "growth-bot": {
+          "token": "${DISCORD_GROWTH_BOT_TOKEN}"
+        },
+        "builder-bot": {
+          "token": "${DISCORD_BUILDER_BOT_TOKEN}"
+        },
+        "operation-bot": {
+          "token": "${DISCORD_OPERATION_BOT_TOKEN}"
+        }
+      }
+    }
+  },
+  "bindings": [
+    {
+      "agentId": "growth",
+      "match": {
+        "channel": "discord",
+        "accountId": "growth-bot"
+      }
+    },
+    {
+      "agentId": "builder",
+      "match": {
+        "channel": "discord",
+        "accountId": "builder-bot"
+      }
+    },
+    {
+      "agentId": "operation",
+      "match": {
+        "channel": "discord",
+        "accountId": "operation-bot"
+      }
+    }
+  ]
+}
