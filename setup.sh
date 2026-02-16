@@ -1,3 +1,3 @@
-cp -r skills/* /data/.openclaw/skills
+git config --global --add safe.directory /data/openclaw-data
 gh auth setup-git
-
+git pull
