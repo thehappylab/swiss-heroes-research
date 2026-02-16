@@ -25,19 +25,19 @@
         "id": "growth",
         "name": "GrowthAgent",
         "default": true,
-        "workspace": "/data/workspace-growth",
+        "workspace": "/data/openclaw-data/workspace-growth",
         "model": "openrouter/moonshotai/kimi-k2.5"
       },
       {
         "id": "builder",
         "name": "BuilderAgent",
-        "workspace": "/data/workspace-builder",
+        "workspace": "/data/openclaw-data/workspace-builder",
         "model": "openrouter/anthropic/claude-opus-4.6"
       },
       {
         "id": "operation",
         "name": "OperationAgent",
-        "workspace": "/data/workspace-operation",
+        "workspace": "/data/openclaw-data/workspace-operation",
         "model": "openrouter/moonshotai/kimi-k2.5"
       }
     ]
