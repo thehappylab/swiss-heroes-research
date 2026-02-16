@@ -58,15 +58,17 @@
   "channels": {
     "discord": {
       "enabled": true,
-      "groupPolicy": "open",
       "accounts": {
         "growth-bot": {
+          "groupPolicy": "open",
           "token": "${DISCORD_GROWTH_BOT_TOKEN}"
         },
         "builder-bot": {
+          "groupPolicy": "open",
           "token": "${DISCORD_BUILDER_BOT_TOKEN}"
         },
         "operation-bot": {
+          "groupPolicy": "open",
           "token": "${DISCORD_OPERATION_BOT_TOKEN}"
         }
       }
