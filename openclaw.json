@@ -57,6 +57,8 @@
   },
   "channels": {
     "discord": {
+      "enabled": true,
+      "groupPolicy": "open",
       "accounts": {
         "growth-bot": {
           "token": "${DISCORD_GROWTH_BOT_TOKEN}"
