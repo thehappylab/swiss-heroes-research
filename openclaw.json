@@ -18,8 +18,7 @@
       "maxConcurrent": 4,
       "subagents": {
         "maxConcurrent": 8
-      },
-      "skils": ["/data/openclaw-data/skills"]
+      }
     },
     "list": [
       {
@@ -97,5 +96,18 @@
         "accountId": "operation-bot"
       }
     }
-  ]
+  ],
+  "skills": {
+    "load": {
+      "extraDirs": ["/data/openclaw-data/skills"]
+    },
+    "entries": {
+      "video-transcript-downloader": { "enabled": true },
+      "frontend-design": { "enabled": true },
+      "create-cli": { "enabled": true },
+      "summarize": { "enabled": true },
+      "obsidian": { "enabled": true },
+      "bitwarden-vault": { "enabled": true }
+    }
+  }
 }
