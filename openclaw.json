@@ -96,5 +96,12 @@
         "accountId": "operation-bot"
       }
     }
-  ]
+  ],
+  "skills": {
+    "local": {
+      "extraDirs": [
+        "/data/openclaw-data/skills"
+      ]
+    }
+  }
 }
