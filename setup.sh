@@ -7,6 +7,7 @@ gh auth setup-git
 
 if [[ "$1" == "--update-restart" ]]; then
   git pull
+  rm /data/.openclaw/openclaw.json
   openclaw gateway restart
 else
   echo "No restart flag provided"

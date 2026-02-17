@@ -74,6 +74,11 @@ Each workspace contains role-specific operating documents:
 3. Ensure required environment variables are present in deployment.
 4. Validate that each configured workspace path exists in the runtime container/host.
 
+## Skills
+
+* For all: `clawhub install my-skill --dir /data/openclaw-data/skills`
+* Just for growth: `clawhub install my-skill --dir /data/openclaw-data/workspace-growth/skills`
+
 ## Security Notes
 
 - Do not commit real API keys or Discord bot tokens.
