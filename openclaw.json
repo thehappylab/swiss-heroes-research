@@ -7,6 +7,7 @@
       "model": {
         "primary": "openrouter/moonshotai/kimi-k2.5"
       },
+      "workspace": "/data/openclaw-data/workspace-growth",
       "models": {
         "openrouter/auto": {
           "alias": "OpenRouter"
