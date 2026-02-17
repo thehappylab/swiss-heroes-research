@@ -31,7 +31,7 @@
       {
         "id": "builder",
         "name": "Bob",
-        "workspace": "/data/openclaw-data/workspace-builder",
+        "workspace": "/data/openclaw-data/workspace-build",
         "model": "openrouter/anthropic/claude-opus-4.6"
       },
       {
@@ -99,7 +99,10 @@
   ],
   "skills": {
     "load": {
-      "extraDirs": ["/data/openclaw-data/skills"]
+      "extraDirs": [
+        "/data/openclaw-data/skills",
+        "/data/workspace/skills"
+      ]
     },
     "entries": {
       "video-transcript-downloader": { "enabled": true },

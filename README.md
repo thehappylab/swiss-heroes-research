@@ -6,27 +6,6 @@ This repository stores:
 - a central runtime configuration in `openclaw.json`
 - workspace-specific identity/behavior documents for agent personas
 
-## Repository Layout
-
-```text
-openclaw-data/
-├── openclaw.json
-├── workspace-builder/
-│   ├── AGENTS.md
-│   ├── BOOTSTRAP.md
-│   ├── IDENTITY.md
-│   ├── SOUL.md
-│   ├── TOOLS.md
-│   └── USER.md
-└── workspace-growth/
-    ├── AGENTS.md
-    ├── BOOTSTRAP.md
-    ├── IDENTITY.md
-    ├── SOUL.md
-    ├── TOOLS.md
-    └── USER.md
-```
-
 ## What `openclaw.json` Configures
 
 The `openclaw.json` file defines four major areas:
@@ -41,10 +20,10 @@ The `openclaw.json` file defines four major areas:
 Configured agents:
 
 - `growth` (default): workspace `/data/workspace-growth`
-- `builder`: workspace `/data/workspace-builder`
+- `builder`: workspace `/data/workspace-build`
 - `admin`: workspace `/data/workspace-admin`
 
-Note: this repository currently includes `workspace-growth` and `workspace-builder` directories. If you use the `admin` agent, ensure `/data/workspace-admin` exists in your runtime environment.
+Note: this repository currently includes `workspace-growth` and `workspace-build` directories. If you use the `admin` agent, ensure `/data/workspace-admin` exists in your runtime environment.
 
 ### Tool Configuration
 
