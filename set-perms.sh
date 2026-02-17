@@ -9,3 +9,5 @@ chown -R "claw:claw" /data/.cache 2>/dev/null || true
 chown -R "claw:claw" /data/.git-credentials 2>/dev/null || true
 chown -R "claw:claw" /data/.npm 2>/dev/null || true
 chown -R "claw:claw" /data/.pki 2>/dev/null || true
+chown -R "claw:claw" /data/.config 2>/dev/null || true
+chown -R "claw:claw" /data/.gitconfig 2>/dev/null || true
