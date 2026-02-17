@@ -18,3 +18,5 @@ Thumbs.db
 !.env.example
 
 .openclaw/
+
+workspace-builder/code
