@@ -100,8 +100,7 @@
   "skills": {
     "load": {
       "extraDirs": [
-        "/data/openclaw-data/skills",
-        "/data/workspace/skills"
+        "/data/openclaw-data/skills"
       ]
     },
     "entries": {
