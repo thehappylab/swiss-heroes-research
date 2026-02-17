@@ -5,10 +5,14 @@ git config --global pull.rebase true
 
 gh auth setup-git
 
-if [[ "$1" == "--update-restart" ]]; then
+if [[ "$1" == "--update" ]]; then
   git pull
   rm /data/.openclaw/openclaw.json
   openclaw gateway restart
+elif [[ "$1" == "--push" ]]; then
+  git add.
+  git commit -a -m"Update" 
+  git push
 else
-  echo "No restart flag provided"
+  echo "No valid flag provided (use --update or --push)"
 fi
