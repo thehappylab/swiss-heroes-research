@@ -1,4 +1,7 @@
 {
+  "commands": {
+    "restart": true
+  },
   "agents": {
     "defaults": {
       "model": {
