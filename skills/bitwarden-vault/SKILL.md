@@ -1,6 +1,6 @@
 ---
 name: bitwarden
-description: Set up and use Bitwarden CLI (bw). Use when installing the CLI, authenticating (login/unlock), or reading secrets from your vault. Supports email/password, API key, and SSO authentication methods.
+description: Set up and use Bitwarden CLI (bw). Use when installing the CLI, authenticating with API key, unlocking with BW_MASTER_PASSWORD, or reading secrets from your vault.
 homepage: https://bitwarden.com/help/cli/
 metadata: {"clawdbot":{"emoji":"🔒","requires":{"bins":["bw"]},"install":[{"id":"npm","kind":"npm","package":"@bitwarden/cli","bins":["bw"],"label":"Install Bitwarden CLI (npm)"},{"id":"brew","kind":"brew","formula":"bitwarden-cli","bins":["bw"],"label":"Install Bitwarden CLI (brew)"},{"id":"choco","kind":"choco","package":"bitwarden-cli","bins":["bw"],"label":"Install Bitwarden CLI (choco)"}]}}
 ---
@@ -17,19 +17,17 @@ The Bitwarden command-line interface (CLI) provides full access to your Bitwarde
 
 1. **Verify CLI installation**: Run `bw --version` to confirm the CLI is available
 2. **Create a dedicated tmux session**: `tmux new-session -d -s bw-session`
-3. **Attach and authenticate**: Run `bw login` or `bw unlock` inside the session
-4. **Export session key**: After unlock, export `BW_SESSION` as instructed by the CLI
+3. **Attach and authenticate**: Run `bw login --apikey` inside the session
+4. **Unlock and export session key**: Run `export BW_SESSION=$(bw unlock --passwordenv BW_MASTER_PASSWORD --raw)`
 5. **Execute vault commands**: Use `bw get`, `bw list`, etc. within the same session
 
-### Authentication Methods
+### Authentication Method (Required)
 
 | Method | Command | Use Case |
 |--------|---------|----------|
-| Email/Password | `bw login` | Interactive sessions, first-time setup |
-| API Key | `bw login --apikey` | Automation, scripts (requires separate unlock) |
-| SSO | `bw login --sso` | Enterprise/organization accounts |
+| API Key | `bw login --apikey` | Required for this skill (follow with unlock) |
 
-After `bw login` with email/password, your vault is automatically unlocked. For API key or SSO login, you must subsequently run `bw unlock` to decrypt the vault.
+After `bw login --apikey`, you must run `bw unlock` to decrypt the vault.
 
 ### Session Key Management
 
@@ -40,7 +38,7 @@ The unlock command outputs a session key. You **must** export it:
 export BW_SESSION="<session_key_from_unlock>"
 
 # Or capture automatically
-export BW_SESSION=$(bw unlock --raw)
+export BW_SESSION=$(bw unlock --passwordenv BW_MASTER_PASSWORD --raw)
 ```
 
 Session keys remain valid until you run `bw lock` or `bw logout`. They do **not** persist across terminal windows—hence the tmux requirement.
@@ -77,7 +75,8 @@ bw list items --search "github"
 - **ALWAYS** use `bw lock` when finished with vault operations
 - **PREFER** reading secrets directly into environment variables or piping to commands
 - If you receive "Vault is locked" errors, re-authenticate with `bw unlock`
-- If you receive "You are not logged in" errors, run `bw login` first
+- If you receive "You are not logged in" errors, run `bw login --apikey` first
+- Unlock with `bw unlock --passwordenv BW_MASTER_PASSWORD` (do not prompt for manual password entry)
 - Stop and request assistance if tmux is unavailable on the system
 
 ## Environment Variables
@@ -87,6 +86,7 @@ bw list items --search "github"
 | `BW_SESSION` | Session key for vault decryption (required for all vault commands) |
 | `BW_CLIENTID` | API key client ID (for `--apikey` login) |
 | `BW_CLIENTSECRET` | API key client secret (for `--apikey` login) |
+| `BW_MASTER_PASSWORD` | Master password used by `bw unlock --passwordenv BW_MASTER_PASSWORD` |
 | `BITWARDENCLI_APPDATA_DIR` | Custom config directory (enables multi-account setups) |
 
 ## Self-Hosted Servers
