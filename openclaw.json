@@ -100,16 +100,11 @@
   "skills": {
     "load": {
       "extraDirs": [
-        "/data/openclaw-data/skills"
+        "/data/openclaw-data/skills",
+        "/data/workspace-builder/skills",
+        "/data/workspace-growth/skills",
+        "/data/workspace-operation/skills"
       ]
-    },
-    "entries": {
-      "video-transcript-downloader": { "enabled": true },
-      "frontend-design": { "enabled": true },
-      "create-cli": { "enabled": true },
-      "summarize": { "enabled": true },
-      "obsidian": { "enabled": true },
-      "bitwarden-vault": { "enabled": true }
     }
   }
 }
