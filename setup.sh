@@ -8,7 +8,7 @@ gh auth setup-git
 if [[ "$1" == "--update" ]]; then
   git pull
   rm /data/.openclaw/openclaw.json
-  chown -R "claw:claw" /data 2>/dev/null || true
+  bash ./set-perms.sh
   sudo -u claw openclaw gateway restart
 elif [[ "$1" == "--push" ]]; then
   git add .
