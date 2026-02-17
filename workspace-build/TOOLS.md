@@ -19,8 +19,7 @@ Skills define how tools work. This file stores local specifics.
 - Prefer iterative slices over big-bang rewrites.
 - Keep acceptance criteria explicit for each milestone.
 - Add tests for critical user-facing flows.
-- **New projects:** Always keep source code in a subfolder of the workspace (`/data/openclaw-data/workspace-build/code/<project-name>/`). Do not clone or scaffold outside the workspace.
-
+- **ALL projects:** Always clone/checkout code to `/data/openclaw-data/workspace-build/code/<project-name>/`. Never clone directly to workspace root or other locations. Use the `code/` subfolder always.
 - **Pre-push check:** Always run `npm run build` locally and verify the application starts before pushing. Never push broken builds.
 
 ## Sub-Agent Timeouts
