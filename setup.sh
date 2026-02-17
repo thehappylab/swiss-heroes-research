@@ -13,6 +13,4 @@ elif [[ "$1" == "--push" ]]; then
   git add.
   git commit -a -m"Update" 
   git push
-else
-  echo "No valid flag provided (use --update or --push)"
 fi
