@@ -19,18 +19,13 @@ Thumbs.db
 tmp.txt
 
 .openclaw/
+workspace-*/.clawhub/
 
-workspace-build/code/**
-!workspace-build/code/**/*.md
-!workspace-build/code/memory/
-!workspace-build/code/memory/**
-
-workspace-growth/code/**
-!workspace-growth/code/**/*.md
-!workspace-growth/code/memory/
-!workspace-growth/code/memory/**
-
-workspace-operation/code/**
-!workspace-operation/code/**/*.md
-!workspace-operation/code/memory/
-!workspace-operation/code/memory/**
+# Workspace folders: ignore everything by default,
+# then allow only markdown files and memory directories.
+workspace-*/**
+!workspace-*/
+!workspace-*/**/
+!workspace-*/**/*.md
+!workspace-*/memory/
+!workspace-*/memory/**
