@@ -10,7 +10,7 @@ if [[ "$1" == "--update" ]]; then
   rm /data/.openclaw/openclaw.json
   openclaw gateway restart
 elif [[ "$1" == "--push" ]]; then
-  git add.
+  git add .
   git commit -a -m"Update" 
   git push
 fi
