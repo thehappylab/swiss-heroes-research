@@ -25,7 +25,6 @@ workspace-*/.clawhub/
 # then allow only markdown files and memory directories.
 workspace-*/**
 !workspace-*/
-!workspace-*/**/
-!workspace-*/**/*.md
+!workspace-*/*.md
 !workspace-*/memory/
 !workspace-*/memory/**
