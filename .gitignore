@@ -28,3 +28,5 @@ workspace-*/**
 !workspace-*/*.md
 !workspace-*/memory/
 !workspace-*/memory/**
+!workspace-*/skills/
+!workspace-*/skills/**
