@@ -2,6 +2,16 @@
   "commands": {
     "restart": true
   },
+  "audio": {
+    "transcribe": {
+      "enabled": true,
+      "provider": "openai-whisper"
+    },
+    "tts": {
+      "enabled": true,
+      "provider": "elevenlabs"
+    }
+  },
   "agents": {
     "defaults": {
       "model": {
