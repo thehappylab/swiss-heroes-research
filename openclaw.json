@@ -6,12 +6,6 @@
     "transcribe": {
       "enabled": true,
       "provider": "openai-whisper"
-    },
-    "tts": {
-      "enabled": true,
-      "provider": "openai",
-      "model": "tts-1",
-      "voice": "alloy"
     }
   },
   "agents": {
