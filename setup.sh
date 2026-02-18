@@ -7,7 +7,7 @@ gh auth setup-git
 
 if [[ "$1" == "--update" ]]; then
   git pull
-  bash ./set-perms.sh
+  # bash ./set-perms.sh
   rm /data/.openclaw/openclaw.json
   sudo -u claw openclaw gateway restart
 elif [[ "$1" == "--push" ]]; then

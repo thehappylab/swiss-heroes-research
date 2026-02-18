@@ -9,7 +9,9 @@
     },
     "tts": {
       "enabled": true,
-      "provider": "elevenlabs"
+      "provider": "openai",
+      "model": "tts-1",
+      "voice": "alloy"
     }
   },
   "agents": {
