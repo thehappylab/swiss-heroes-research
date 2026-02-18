@@ -13,7 +13,7 @@
       "model": {
         "primary": "openrouter/moonshotai/kimi-k2.5"
       },
-      "workspace": "/data/openclaw-data/workspace-growth",
+      "workspace": "/data/openclaw-data/workspace-operation",
       "models": {
         "openrouter/auto": {
           "alias": "OpenRouter"
@@ -32,21 +32,21 @@
     },
     "list": [
       {
-        "id": "growth",
+        "id": "operation-bot",
         "name": "Tony",
-        "default": true,
         "workspace": "/data/openclaw-data/workspace-growth",
         "model": "openrouter/moonshotai/kimi-k2.5"
       },
       {
-        "id": "builder",
+        "id": "builder-bot",
         "name": "Bob",
         "workspace": "/data/openclaw-data/workspace-build",
         "model": "openrouter/moonshotai/kimi-k2.5"
       },
       {
-        "id": "operation",
+        "id": "operation-bot",
         "name": "Nici",
+        "default": true,
         "workspace": "/data/openclaw-data/workspace-operation",
         "model": "openrouter/moonshotai/kimi-k2.5"
       }
@@ -55,7 +55,7 @@
   "tools": {
     "agentToAgent": {
       "enabled": true,
-      "allow": ["growth", "builder", "operation"]
+      "allow": ["growth-bot", "builder-bot", "operation-bot"]
     },
     "web": {
       "search": {
@@ -68,6 +68,8 @@
   "channels": {
     "discord": {
       "enabled": true,
+      "groupPolicy": "allowlist",
+      "defaultAccount": "operation-bot",
       "accounts": {
         "growth-bot": {
           "groupPolicy": "open",
@@ -86,21 +88,21 @@
   },
   "bindings": [
     {
-      "agentId": "growth",
+      "agentId": "growth-bot",
       "match": {
         "channel": "discord",
         "accountId": "growth-bot"
       }
     },
     {
-      "agentId": "builder",
+      "agentId": "builder-bot",
       "match": {
         "channel": "discord",
         "accountId": "builder-bot"
       }
     },
     {
-      "agentId": "operation",
+      "agentId": "operation-bot",
       "match": {
         "channel": "discord",
         "accountId": "operation-bot"
