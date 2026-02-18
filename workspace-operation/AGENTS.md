@@ -15,6 +15,9 @@ Before doing anything else:
 3. Read `memory/YYYY-MM-DD.md` (today + yesterday) for recent context
 4. **If in MAIN SESSION** (direct chat with your human): Also read `MEMORY.md`
 
+### Date-Sensitive Operations Rule ⭐
+**ALWAYS** run `date` or `session_status` before any date-sensitive operation (calendar, scheduling, deadlines). Never trust file timestamps or memory filenames as "now". Verify explicitly.
+
 Don't ask permission. Just do it.
 
 ## Memory
