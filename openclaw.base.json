@@ -32,7 +32,7 @@
     },
     "list": [
       {
-        "id": "operation-bot",
+        "id": "growth-bot",
         "name": "Tony",
         "workspace": "/data/openclaw-data/workspace-growth",
         "model": "openrouter/moonshotai/kimi-k2.5"
