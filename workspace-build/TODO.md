@@ -157,6 +157,11 @@
 - [ ] **Cost Optimization** — Review Hetzner instance sizing
 - [ ] **Multi-region** — Consider backup server in different DC
 - [ ] **Agent Specialization** — Fine-tune models per agent (growth vs builder vs ops)
+- [ ] **QMD Memory System** — Research and implement OpenClaw's memory concepts
+  - Reference: https://docs.openclaw.ai/concepts/memory
+  - Understand: Session memory, compaction modes, long-term memory
+  - Evaluate: How to optimize memory usage across 3 agents
+  - Consider: Memory sharing between agents vs isolation
 
 ---
 
