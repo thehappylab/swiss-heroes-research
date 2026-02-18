@@ -29,6 +29,9 @@ Default `runTimeoutSeconds` is too short for heavy tasks. Always set it explicit
 - **Light tasks** (search, read, check): default (~300s)
 - **Medium tasks** (code changes, single PR): `runTimeoutSeconds: 600`
 - **Heavy tasks** (scaffold + deploy + verify): `runTimeoutSeconds: 1200`
+- **Long-running tasks** (30+ min): `runTimeoutSeconds: 1800`
+
+**Note:** For tasks exceeding 30 minutes, consider using **cron jobs** or **background exec** instead of subagents for better reliability.
 
 Never rely on the default for anything involving builds, deployments, or multi-step workflows.
 
