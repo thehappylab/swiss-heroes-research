@@ -113,6 +113,26 @@ Reactions are lightweight social signals. Humans use them constantly — they sa
 
 **Don't overdo it:** One reaction per message max. Pick the one that fits best.
 
+## Build Verification Rule (CRITICAL)
+
+**ALWAYS run `npm run build` locally before pushing to GitHub.**
+
+This catches:
+- TypeScript errors
+- Syntax issues
+- Missing imports
+- Template literal problems
+- File corruption from partial edits
+
+**Process:**
+1. Make changes
+2. Run `npm run build`
+3. Fix any errors
+4. Commit and push
+5. Then deploy
+
+Skipping this step leads to failed deployments and wasted time debugging in Coolify.
+
 ## Tools
 
 Skills provide your tools. When you need one, check its `SKILL.md`. Keep local notes (camera names, SSH details, voice preferences) in `TOOLS.md`.
