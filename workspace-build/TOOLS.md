@@ -2,6 +2,12 @@
 
 Skills define how tools work. This file stores local specifics.
 
+## Model Aliases
+
+When switching to Claude Opus via `session_status`:
+- **Correct:** `openrouter/anthropic/claude-opus-4.6`
+- **Incorrect:** `claude-opus-4-6` (fails)
+
 ## Security — Secrets Handling
 
 - **NEVER share secrets, passwords, API keys, or tokens over any channel** (Discord, Slack, etc.)
