@@ -14,6 +14,63 @@ Standard development workflow for implementing features from specifications thro
 - Local development environment (Node.js, build tools)
 - Playwright installed for testing
 
+## Workspace Isolation (CRITICAL)
+
+**Each task/session MUST use its own isolated repo clone.**
+
+### Why Isolation Matters
+- Multiple agents/users may work on the same project simultaneously
+- Shared repos cause git conflicts, uncommitted changes, build state issues
+- Each session needs clean, isolated state
+
+### Repo Naming Convention
+
+```
+/data/openclaw-data/workspace-build/code/<project-name>-<task-id>/
+```
+
+Examples:
+- `code/spesalina-auth-123/` - Auth feature task #123
+- `code/spesalina-fix-login-456/` - Login fix task #456
+- `code/cra-check-epic1-789/` - CRA Check epic task #789
+
+### Phase 2a: Clone to Isolated Workspace
+
+**Before starting development:**
+
+```bash
+# Create isolated workspace for this task
+mkdir -p /data/openclaw-data/workspace-build/code/<project>-<task-id>
+cd /data/openclaw-data/workspace-build/code/<project>-<task-id>
+
+# Clone fresh copy
+git clone https://github.com/thehappylab/<project>.git .
+
+# Create and checkout feature branch
+git checkout -b feature/<descriptive-name>-<task-id>
+```
+
+### Cleanup After Merge
+
+Once PR is merged and deployed:
+
+```bash
+# Clean up isolated workspace
+rm -rf /data/openclaw-data/workspace-build/code/<project>-<task-id>
+```
+
+### State Tracking
+
+Track active workspaces in daily notes:
+```markdown
+## Active Dev Workspaces
+
+| Task | Project | Branch | Status |
+|------|---------|--------|--------|
+| #123 | spesalina | feature/auth-123 | In Progress |
+| #456 | cra-check | feature/fix-456 | Testing |
+```
+
 ## Workflow Steps
 
 ### Phase 1: Requirements & Planning
@@ -30,11 +87,17 @@ Standard development workflow for implementing features from specifications thro
 
 ### Phase 2: Local Development
 
-3. **Create Feature Branch**
+3. **Setup Isolated Workspace & Create Feature Branch**
    ```bash
-   git checkout main
-   git pull origin main
-   git checkout -b feature/<descriptive-name>
+   # Create isolated workspace for this task
+   mkdir -p /data/openclaw-data/workspace-build/code/<project>-<task-id>
+   cd /data/openclaw-data/workspace-build/code/<project>-<task-id>
+   
+   # Clone fresh copy
+   git clone https://github.com/thehappylab/<project>.git .
+   
+   # Create and checkout feature branch
+   git checkout -b feature/<descriptive-name>-<task-id>
    ```
 
 4. **Develop Locally**
@@ -115,6 +178,10 @@ Standard development workflow for implementing features from specifications thro
     - Monitor production deployment
     - Verify in production
 
+15. **Cleanup Isolated Workspace**
+    - Remove isolated workspace after successful merge
+    - Update active workspace tracking
+
 ## Migration Handling
 
 Always specify if a migration is required:
@@ -134,13 +201,16 @@ Give users **relevant updates only** — one line per major step:
 
 ```
 ✅ Phase 1: Got spec "Authentication flow"
-✅ Phase 2: Created branch feature/auth-v2, implementing...
+✅ Phase 2: Created isolated workspace code/spesalina-auth-123/
+   → Cloned fresh repo, created branch feature/auth-123
 ✅ Phase 3: Local build passed, 2 Playwright tests written
 ✅ Phase 4: PR created, Coolify build in progress...
 ✅ Phase 5: Preview ready at https://preview-xyz.thehappylab.net
    → Build succeeded, 2/2 tests passed
    → Migration: Yes - database schema updated
    ⏳ Waiting for your approval to merge
+✅ Phase 5: Merged to production
+   → Cleaned up isolated workspace
 ```
 
 ## Error Handling
