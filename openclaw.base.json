@@ -2,12 +2,6 @@
   "commands": {
     "restart": true
   },
-  "audio": {
-    "transcribe": {
-      "enabled": true,
-      "provider": "openai-whisper"
-    }
-  },
   "agents": {
     "defaults": {
       "model": {
@@ -63,13 +57,21 @@
         "provider": "brave",
         "apiKey": "${BRAVE_WEBSEARCH_API_KEY}"
       }
+    },
+    "media": {
+      "audio": {
+        "enabled": true,
+        "maxBytes": 20971520,
+        "models": [
+          { "provider": "openai", "model": "gpt-4o-mini-transcribe" }
+        ]
+      }
     }
   },
   "channels": {
     "discord": {
       "enabled": true,
       "groupPolicy": "allowlist",
-      "defaultAccount": "operation-bot",
       "accounts": {
         "growth-bot": {
           "groupPolicy": "open",
