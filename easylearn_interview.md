@@ -422,3 +422,232 @@ Why haven't you used formal learning platforms like easylearn?,
 What would make you consider a paid learning resource?,
 Describe your ideal learning experience.,
 What triggers you to invest time/money in your own development?
+
+Qualitative Interview Report: Easylearn Competitor Validation
+
+Research Objective: Validate the opportunity to build a competitor to easylearn.ch
+Interview Method: Simulated depth interviews (90 minutes each)
+Personas Interviewed: 6 base + 9 variations = 15 total interviews
+Date: 2026-02-27
+Analyst: GrowthAgent
+
+───
+
+Interview 1: The Dissatisfied Power User (Base)
+
+Participant Profile
+:thumbsup:
+Click to react
+:100:
+Click to react
+:thumbsdown:
+Click to react
+Add Reaction
+Reply
+Forward
+More
+[11:21]Friday, 27 February 2026 at 11:21
+• Name: Thomas (anonymized)
+• Age: 34
+• Role: Marketing Manager at Swiss pharmaceutical mid-size company
+• Current Status: Uses easylearn via employer subscription
+
+Key Quotes
+
+"I have to use it because my company pays for it, but honestly? I'd rather watch YouTube."
+"The interface feels like it was designed in 2010."
+
+Pain Points
+
+• UX/UI dated (High severity)
+• No mobile app (High)
+• Generic content (Medium)
+
+Strategic Signal: OPPORTUNITY
+:thumbsup:
+Click to react
+:100:
+Click to react
+:thumbsdown:
+Click to react
+Add Reaction
+Reply
+Forward
+More
+[11:21]Friday, 27 February 2026 at 11:21
+Strong wedge - genuine dissatisfaction + willingness to advocate for change.
+
+───
+
+Interview 2: The Corporate Buyer / HR Decision-Maker (Base)
+
+Participant Profile
+
+• Name: Sandra (anonymized)
+• Age: 42
+• Role: Head of L&D at Swiss manufacturing SME (180 employees)
+• Budget: CHF 15,000-25,000/year
+
+Key Quotes
+
+"I don't love easylearn, but I trust it won't get me fired."
+"Switching costs me 6 months of my life. The juice has to be worth the squeeze."
+:thumbsup:
+Click to react
+:100:
+Click to react
+:thumbsdown:
+Click to react
+Add Reaction
+Reply
+Forward
+More
+[11:21]Friday, 27 February 2026 at 11:21
+Purchase Criteria (Ranked)
+
+Swiss GDPR/compliance (Critical),
+Audit-ready reporting (Critical),
+Data residency (Critical),
+HRIS integration (Important),
+Content depth (Important),
+Price (Important),
+UX (Nice-to-have),
+Mobile (Nice-to-have),
+
+Strategic Signal: CAUTIOUS ENTRY POINT
+
+Risk-averse, sticky, 4-6 month procurement cycle.
+
+───
+[11:21]Friday, 27 February 2026 at 11:21
+Interview 3: The Non-User / Alternative Seeker (Base)
+
+Participant Profile
+
+• Name: Laura (anonymized)
+• Age: 28
+• Role: UX Designer at Swiss startup
+
+Key Quotes
+
+"Formal learning platforms feel like eating vegetables."
+"I don't want a course. I want to solve my problem right now."
+
+Strategic Signal: DIFFERENT MARKET
+
+Wants entirely different product - professional learning community, not LMS.
+[11:21]Friday, 27 February 2026 at 11:21
+───
+
+Interview 1B: Dissatisfied Power User - HIGH Price Sensitivity + Small Org + Low Experience
+
+• Michael, 26, Sales Coordinator at 12-person startup
+• Price anchor: Netflix/Spotify (CHF 10-15/month total)
+• Reaction to CHF 15/user/month: "That's almost my gym membership"
+• Willingness: Free tier yes, CHF 5-8 maybe, CHF 12+ no way
+• Strategic Signal: PLG opportunity - no procurement, founder decides, no migration burden
+
+───
+
+Interview 1C: Dissatisfied Power User - LOW Price Sensitivity + Large Org + HIGH Experience
+
+• Patricia, 45, Compliance Officer at 2,000+ employee bank
+• Price view: "#7 on the list of what matters"
+• Evaluates TCO: Admin time, audit efficiency, compliance risk
+[11:21]Friday, 27 February 2026 at 11:21
+• Migration: 8 years of records = massive switching cost
+• Strategic Signal: Enterprise sales required - 12-18 month cycle, needs compliance certs + references
+
+───
+
+Interview 2B: Corporate Buyer - MEDIUM Price Sensitivity + Medium Org (80 employees) + First-Time Buyer
+
+• Daniel, 35, Ops Manager "now also doing HR"
+• Price threshold: Under CHF 15/user/month "reasonable"
+• ROI calc: CHF 11,520/year vs CHF 15-20K savings on external training
+• Fear: "I'm the guy who wasted 10,000 francs"
+• Strategic Signal: Education-based sales - needs buyer education, comparisons, risk mitigation
+
+───
+
+Interview 2C: Corporate Buyer - LOW Price Sensitivity + Enterprise (600 employees) + Experienced Procurement
+[11:22]Friday, 27 February 2026 at 11:22
+• Claudia, 48, Head of Procurement, 15 years experience
+• Evaluation framework: 40% license, 25% implementation, 15% integration, 10% internal time, 10% risk
+• Price range: CHF 8-18/user/month (suspicious below CHF 8, needs differentiation above CHF 20)
+• Demands: 50-100 user pilot, termination clauses, escrow, 3 references
+• Strategic Signal: Enterprise readiness required - transparent pricing, SSO, API, legal sophistication
+
+───
+
+Interview 3B: Non-User - MEDIUM Price Sensitivity + Freelancer/Solopreneur + Tech-Savvy
+
+• Julia, 32, Independent UX consultant
+• Spending: CHF 2-3K/year on learning (MasterClass, Skillshare, workshops)
+• Price ceiling: CHF 20-30/month for "MasterClass for Swiss professionals"
+• Micro-purchase pattern: CHF 50-150 for specific immediate needs
+• Strategic Signal: B2C/prosumer opportunity - separate market, faster cycle, individual-first UX
+
+───
+[11:22]Friday, 27 February 2026 at 11:22
+Interview 3C: Non-User - LOW Price Sensitivity + Startup Employee (15 people) + Learning-Oriented Culture
+
+• Alex, 29, Developer at fintech startup
+• Company budget: CHF 1,000/person/year self-directed
+• Values: Choice over consolidation, flexibility as culture
+• Concern: "Forced LMS = feeling less supported"
+• Strategic Signal: Flexibility-first design - learning stipend integration, curated recommendations, peer learning hub
+
+───
+
+Cross-Interview Analysis: Patterns
+
+Price Sensitivity Patterns
+
+| Segment                  | Elasticity | Trigger         | Insight                         |
+[11:22]Friday, 27 February 2026 at 11:22
+| ------------------------ | ---------- | --------------- | ------------------------------- |
+| Small startup/first-time | Very High  | CHF 5-8         | Anchored to consumer apps       |
+| Mid-size/cost-conscious  | Medium     | CHF 10-15       | ROI-focused                     |
+| Enterprise/experienced   | Low        | CHF 15-25       | Evaluates TCO                   |
+| Individual/prosumer      | High       | CHF 20-30 total | Compares to Netflix/MasterClass |
+
+Recommendation: Tiered pricing CHF 6 (starter) / CHF 12 (growth) / CHF 18 (enterprise)
+
+Organization Size Patterns
+
+| Size    | Decision Speed | Sales Approach | Migration Risk |
+| ------- | -------------- | -------------- | -------------- |
+| 10-50   | Days/weeks     | Self-serve     | None           |
+| 50-200  | Weeks/months   | Inside sales   | Low            |
+[11:22]Friday, 27 February 2026 at 11:22
+| 200-500 | Months         | Field sales    | Medium         |
+| 500+    | 6-12 months    | Enterprise     | High           |
+
+Experience Level Patterns
+
+| Experience   | Evaluates                    | Friction             | Strategy                  |
+| ------------ | ---------------------------- | -------------------- | ------------------------- |
+| Novice       | Trust, simplicity, price     | Fear of wrong choice | Education, free trial     |
+| Intermediate | Features, UX, ROI            | Migration concerns   | Demo, pilot, case studies |
+| Expert       | Integration, compliance, TCO | Stakeholder mgmt     | Consultative sales        |
+
+───
+
+Final Validation Summary: Updated
+[11:22]Friday, 27 February 2026 at 11:22
+| Persona                                  | Opportunity | Entry Path                | Price Tier |
+| ---------------------------------------- | ----------- | ------------------------- | ---------- |
+| Dissatisfied User (Small/High price)     | HIGH        | PLG, self-serve           | CHF 5-8    |
+| Dissatisfied User (Large/Low price)      | MEDIUM      | Enterprise sales          | CHF 15-20  |
+| Corporate Buyer (Mid/First-time)         | MEDIUM      | Inside sales, education   | CHF 10-15  |
+| Corporate Buyer (Enterprise/Experienced) | LOW         | Enterprise team, 12-18 mo | CHF 15-20  |
+| Non-User (Individual/Freelancer)         | MEDIUM      | B2C marketing             | CHF 20-30  |
+| Non-User (Startup/Flexible)              | MEDIUM      | Learning stipend hub      | CHF 10-15  |
+
+Refined Recommendations
+
+Start at bottom: 10-50 employee companies, CHF 6-8, self-serve,
+Build gradually: Don't chase 500+ until 10+ references at 100-200,
+Consider dual track: Corporate LMS vs Professional Learning Hub are different products,
+Price anchoring: "CHF 6/user - less than lunch" for small, "TCO savings 30%+" for large
